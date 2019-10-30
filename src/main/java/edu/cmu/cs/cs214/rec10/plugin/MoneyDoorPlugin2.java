@@ -11,6 +11,7 @@ public class MoneyDoorPlugin2 implements GamePlugin {
     private int[] arr = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
     private int ONE = 1;
     private int TEN = 10;
+    private final int LOOP_NUM = 10;
 
     // The game framework
     private GameFramework framework = null;
@@ -41,7 +42,7 @@ public class MoneyDoorPlugin2 implements GamePlugin {
         int i;
         // For every position i, chooses a random position >= i and swaps it with the value at position i,
         // generating a random permutation of arr
-        for(i = 0; i < 10; i++) {
+        for(i = 0; i < LOOP_TIME; i++) {
             int nextIndex;
 
             // Find an index at position >= i to swap to position i
